@@ -25,3 +25,9 @@ def decrypt(plain_text, shift_amount):
         decoded_word += alphabet[new_position]
     print(f"The decoded word is {decoded_word}")
 
+if direction == "encode":
+    encrypt(plain_text=text, shift_amount=shift)
+elif direction == "decode":
+    decrypt(plain_text=text, shift_amount=shift)
+else:
+    print("Invalid input")
