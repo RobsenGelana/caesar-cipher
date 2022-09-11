@@ -1,12 +1,12 @@
-from sqlite3 import apilevel
-
+from art import logo
+print(logo)
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
  
 direction = input("To encrypt chose encode to decrypt chose decode: \n").lower()
 text = input("Enter a text to encode: \n").lower()
 shift = int(input("Enter a number to shift: \n"))
-
+shift = shift % 26
 
 def encrypt(plain_text, shift_amount):
     encoded_word = ''
